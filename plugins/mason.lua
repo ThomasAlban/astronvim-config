@@ -7,7 +7,22 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        -- "lua_ls",
+        -- use this page to find the names of language servers:
+        -- https://github.com/williamboman/mason-lspconfig.nvim
+        -- "lua_ls", --lua
+        "cssls", --css
+        "eslint", --eslint
+        "html", --html
+        "hls", --haskell
+        "jsonls", --json
+        "tsserver", --typescript
+        "prismals", --prisma
+        "pylsp", --python
+        "rust_analyzer", --rust
+        "svelte", --svelte
+        "taplo", --toml
+        "lemminx", --xml
+        "clangd", --c++
       })
     end,
   },
@@ -18,8 +33,7 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        -- "prettier",
-        -- "stylua",
+        "prettier",
       })
     end,
   },
